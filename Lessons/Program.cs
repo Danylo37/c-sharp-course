@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 
 
 namespace Lessons
@@ -8,16 +7,17 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            string str = "1,9";
+            string str = "5.9fsddgw";
 
-            NumberFormatInfo numberFormatInfo = new NumberFormatInfo
+            try
             {
-                NumberDecimalSeparator = ",",
-            };
-
-            double a = Convert.ToDouble(str, numberFormatInfo);
-
-            Console.WriteLine(a);
+                double a = double.Parse(str);
+                Console.WriteLine(a);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("FormatException: " + e.Message);
+            }
         }
     }
 }
