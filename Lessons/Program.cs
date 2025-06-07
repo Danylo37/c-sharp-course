@@ -7,7 +7,15 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World from Lessons!");
+            int a = 0;
+
+            Console.WriteLine(a++);
+
+            Console.WriteLine(a);
+
+            Console.WriteLine(++a);
+
+            Console.WriteLine(++a * a);
         }
     }
 }
