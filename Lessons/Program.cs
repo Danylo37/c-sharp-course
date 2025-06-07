@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 
 namespace Lessons
@@ -7,24 +8,16 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            string str;
-            int a, b;
+            string str = "1,9";
 
-            Console.WriteLine("Enter the first number: ");
+            NumberFormatInfo numberFormatInfo = new NumberFormatInfo
+            {
+                NumberDecimalSeparator = ",",
+            };
 
-            str = Console.ReadLine();
+            double a = Convert.ToDouble(str, numberFormatInfo);
 
-            a = Convert.ToInt32(str);
-
-            Console.WriteLine("Enter the second number: ");
-
-            str = Console.ReadLine();
-
-            b = Convert.ToInt32(str);
-
-            int result = a + b;
-
-            Console.WriteLine("Sum is " + result);
+            Console.WriteLine(a);
         }
     }
 }
