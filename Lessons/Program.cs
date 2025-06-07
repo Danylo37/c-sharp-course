@@ -7,15 +7,23 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            int a = 0;
+            int a = int.Parse(Console.ReadLine());
 
-            Console.WriteLine(a++);
-
-            Console.WriteLine(a);
-
-            Console.WriteLine(++a);
-
-            Console.WriteLine(++a * a);
+            switch (a)
+            {
+                case 1:
+                    Console.WriteLine("You entered one.");
+                    break;
+                case 2:
+                    Console.WriteLine("You entered two.");
+                    break;
+                case 3:
+                    Console.WriteLine("You entered three.");
+                    break;
+                default:
+                    Console.WriteLine("You entered a number other than one, two, or three.");
+                    break;
+            }
         }
     }
 }
