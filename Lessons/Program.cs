@@ -7,20 +7,28 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            string str = "5gfsdf";
+            int a = 10;
+            int b = 3;
 
-            int a;
+            int result1 = a + b;
 
-            bool result = int.TryParse(str, out a);
+            Console.WriteLine(result1);
 
-            if (result)
-            {
-                Console.WriteLine("Conversion successful: " + a);
-            }
-            else
-            {
-                Console.WriteLine("Conversion failed. The string could not be parsed as an integer.");
-            }
+            int result2 = a - b;
+
+            Console.WriteLine(result2);
+
+            double result3 = (double) a / b;
+
+            Console.WriteLine(result3);
+
+            int result4 = a % b;
+
+            Console.WriteLine(result4);
+
+            int result5 = a * b;
+
+            Console.WriteLine(result5);
         }
     }
 }
