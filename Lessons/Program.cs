@@ -7,16 +7,19 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            string str = "5.9fsddgw";
+            string str = "5gfsdf";
 
-            try
+            int a;
+
+            bool result = int.TryParse(str, out a);
+
+            if (result)
             {
-                double a = double.Parse(str);
-                Console.WriteLine(a);
+                Console.WriteLine("Conversion successful: " + a);
             }
-            catch (FormatException e)
+            else
             {
-                Console.WriteLine("FormatException: " + e.Message);
+                Console.WriteLine("Conversion failed. The string could not be parsed as an integer.");
             }
         }
     }
