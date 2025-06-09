@@ -8,21 +8,17 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            int[] arr = Enumerable.Range(5, 10).ToArray();
+            int[] arr = { 1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10 };
 
-            foreach (int i in arr)
-            {
-                Console.Write(i + ", ");
-            }
+            Console.WriteLine(arr.Length);
 
-            Console.WriteLine();
+            Console.WriteLine(arr.Min());
 
-            arr = Enumerable.Repeat(1, 10).ToArray();
+            Console.WriteLine(arr.Where(x => x % 2 == 0).Sum());
 
-            foreach (int i in arr)
-            {
-                Console.Write(i + ", ");
-            }
+            int[] arr_distinct = arr.Distinct().ToArray();
+
+            foreach (int x in arr_distinct) Console.Write(x + ", ");
         }
     }
 }
