@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 
 namespace Lessons
@@ -7,107 +8,21 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            int height = 10;
+            int[] arr = Enumerable.Range(5, 10).ToArray();
 
-            for (int i = 0; i < height; i++)
+            foreach (int i in arr)
             {
-                for (int j = 0; j <= i; j++)
-                {
-                    Console.Write("#");
-                }
-                Console.WriteLine();
+                Console.Write(i + ", ");
             }
+
             Console.WriteLine();
-            Console.WriteLine();
 
+            arr = Enumerable.Repeat(1, 10).ToArray();
 
-
-            for (int i = 0; i < height; i++)
+            foreach (int i in arr)
             {
-                for (int j = height; j > i; j--)
-                {
-                    Console.Write("#");
-                }
-                Console.WriteLine();
+                Console.Write(i + ", ");
             }
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-
-            for (int i = 1; i <= height; i++)
-            {
-                int j = 0;
-
-                for (; j < height - i; j++)
-                {
-                    Console.Write(" ");
-                }
-
-                for (; j < height; j++)
-                {
-                    Console.Write("#");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-
-            for (int i = 0; i < height; i++)
-            {
-                for (int j = height; j > i; j--)
-                {
-                    Console.Write(" ");
-                }
-
-                for (int j = 0; j <= i; j++)
-                {
-                    Console.Write("#");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-
-            for (int i = 0; i < height; i++)
-            {
-                int j = 0;
-
-                for (; j < i; j++)
-                {
-                    Console.Write(" ");
-                }
-
-                for (; j < height; j++)
-                {
-                    Console.Write("#");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-
-            for (int i = 0; i < height; i++)
-            {
-                for (int j = 0; j <= i; j++)
-                {
-                    Console.Write(" ");
-                }
-
-                for (int j = height; j > i; j--)
-                {
-                    Console.Write("#");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine();
-            Console.WriteLine();
         }
     }
 }
