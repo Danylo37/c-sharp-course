@@ -7,77 +7,107 @@ namespace Lessons
     {
         static void Main(string[] args)
         {
-            string anotherOne;
+            int height = 10;
 
-            while (true)
+            for (int i = 0; i < height; i++)
             {
-                Console.Clear();
-
-                double a, b;
-                string action;
-
-                try
+                for (int j = 0; j <= i; j++)
                 {
-                    Console.WriteLine("Enter the first number");
-                    a = double.Parse(Console.ReadLine());
-
-                    Console.WriteLine("Enter the second number");
-                    b = double.Parse(Console.ReadLine());
+                    Console.Write("#");
                 }
-                catch (Exception)
-                {
-                    Console.WriteLine("Invalid number");
-                    Console.ReadLine();
-                    continue;
-                }
-
-
-                Console.WriteLine("Enter an action: '+' '-' '*' '/'");
-
-                action = Console.ReadLine();
-
-                switch (action)
-                {
-                    case "+":
-                        Console.WriteLine("{0} + {1} = {2}", a, b, a + b);
-                        break;
-                    case "-":
-                        Console.WriteLine("{0} - {1} = {2}", a, b, a - b);
-                        break;
-                    case "*":
-                        Console.WriteLine("{0} * {1} = {2}", a, b, a * b);
-                        break;
-                    case "/":
-                        {
-                            if (b == 0) Console.WriteLine("Impossible operation");
-                            else Console.WriteLine("{0} / {1} = {2}", a, b, a / b);
-                            break;
-                        }
-                    default:
-                        Console.WriteLine("Invalid action");
-                        break;
-                }
-
-                Console.WriteLine("Another one? (yes/no)");
-
-                anotherOne = Console.ReadLine();
-
-                if (anotherOne.ToLower() == "yes")
-                {
-                    continue;
-                }
-                else if (anotherOne.ToLower() == "no")
-                {
-                    break;
-                }
-                else
-                {
-                    Console.WriteLine("I guess it's 'no'");
-                    break;
-                }
+                Console.WriteLine();
             }
+            Console.WriteLine();
+            Console.WriteLine();
 
-            
+
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = height; j > i; j--)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+
+            for (int i = 1; i <= height; i++)
+            {
+                int j = 0;
+
+                for (; j < height - i; j++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (; j < height; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = height; j > i; j--)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+
+            for (int i = 0; i < height; i++)
+            {
+                int j = 0;
+
+                for (; j < i; j++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (; j < height; j++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+
+
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j <= i; j++)
+                {
+                    Console.Write(" ");
+                }
+
+                for (int j = height; j > i; j--)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine();
         }
     }
 }
